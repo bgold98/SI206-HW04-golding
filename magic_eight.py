@@ -1,9 +1,10 @@
 def ask_question():
-    question = input("What is your question?")
-    if question[-1] == "?":
-        return question
-    else:
-        return "Sorry, I can only answer a question"
+    while True:
+        question = input("What is your question?")
+        if question[-1] == "?":
+            return question
+        else:
+            print("Sorry, I can only answer a question")
 
 answers = ["It is certain", "It is decidedly so", "Without a doubt",
 "Yes definitely", "You may rely on it", "As I see it, yes", "Most likely",
