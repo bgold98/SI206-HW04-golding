@@ -1,10 +1,11 @@
+import random
 def ask_question():
-    while True:
-        question = input("What is your question?")
-        if question[-1] == "?":
-            return question
-        else:
+	question = input("What is your question?")
+        if question[-1] != "?":
             print("Sorry, I can only answer a question")
+        else:
+            return question
+print(ask_question())
 
 answers = ["It is certain", "It is decidedly so", "Without a doubt",
 "Yes definitely", "You may rely on it", "As I see it, yes", "Most likely",
@@ -13,5 +14,6 @@ answers = ["It is certain", "It is decidedly so", "Without a doubt",
 "Don't count on it", "My reply is no", "My sources say no", "Outlook not so good", "Very doubtful"]
 
 def get_answer():
-	randnum = randrange(0,19)
+	randnum = random.randrange(0,19)
 	return answers[randnum]
+print(get_answer())
